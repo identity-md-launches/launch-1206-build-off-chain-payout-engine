@@ -1,0 +1,22 @@
+{
+  "chainId": 4663,
+  "token": "REPLACE: MONEYBACK token address",
+  "poolId": "REPLACE: bytes32 pool id from the Initialize log (npm run discover)",
+  "hook": "REPLACE: MoneyBackHook address",
+  "distributor": "REPLACE: launch Merkle distributor address",
+  "router": "REPLACE: MoneyBackRouter address",
+  "roundPayout": "REPLACE: RoundPayout address",
+  "payoutWallet": "REPLACE: payout wallet (RoundPayout owner)",
+  "deployer": "REPLACE: deployer EOA",
+  "factory": "REPLACE: launch factory address",
+  "launchBlock": "REPLACE: block of the Initialize log",
+  "launchTs": 0,
+  "launchTx": "REPLACE: launch tx hash",
+  "imdEthPoolId": "OPTIONAL: public ETH/IMD v4 pool id for IMD/USD; remove if unused",
+  "distributorTrigger": {
+    "signature": "OPTIONAL: e.g. function release() — the distributor's permissionless trigger; remove if unused",
+    "args": []
+  },
+  "exclude": [],
+  "roundPayoutAbi": "OPTIONAL: paste the RoundPayout ABI array shipped with the deployment; remove to use the built-in ABI"
+}

@@ -1,0 +1,31 @@
+{
+  "name": "moneyback-engine",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Off-chain payout engine for IMD Money Back ($MONEYBACK) on Robinhood Chain (4663)",
+  "type": "module",
+  "engines": {
+    "node": ">=22.9"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "rounds": "tsx --env-file-if-exists=.env src/bin/rounds.ts",
+    "rounds:once": "tsx --env-file-if-exists=.env src/bin/rounds.ts --once",
+    "snapshot": "tsx --env-file-if-exists=.env src/bin/snapshot.ts",
+    "data": "tsx --env-file-if-exists=.env src/bin/data.ts",
+    "discover": "tsx --env-file-if-exists=.env scripts/discover-launch.ts",
+    "reconcile": "tsx --env-file-if-exists=.env scripts/reconcile-claim.ts",
+    "replay": "tsx --env-file-if-exists=.env scripts/replay.ts",
+    "replay:fixture": "tsx scripts/replay.ts --fixture test/fixtures/replay/fixture.json --out /tmp/moneyback-replay --expected test/fixtures/replay/expected"
+  },
+  "dependencies": {
+    "tsx": "^4.23.15",
+    "viem": "^2.57.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.7"
+  }
+}
